@@ -6,10 +6,16 @@
 class Vector
 {
 public:
+    Vector() : x(0), y(0), z(0)
+    {}
+
+    Vector(double _x, double _y, double _z) : x(_x), y(_y), z(_z)
+    {}
+
     void PrintVector()
-        {
+    {
         std::cout << "\n" << x << " " << y << " " << z;
-        }
+    }
 private:
     double x = 0;
     double y = 0;
@@ -18,7 +24,7 @@ private:
 
 int main()
 {
-    Vector vec1;
+    Vector vec1(3,7,2);
     vec1.PrintVector();
 }
 
