@@ -6,6 +6,10 @@
 class Vector
 {
 public:
+    void PrintVector()
+        {
+        std::cout << "\n" << x << " " << y << " " << z;
+        }
 private:
     double x = 0;
     double y = 0;
@@ -14,7 +18,8 @@ private:
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Vector vec1;
+    vec1.PrintVector();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
