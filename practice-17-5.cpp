@@ -14,7 +14,12 @@ public:
 
     void PrintVector()
     {
-        std::cout << "\n" << x << " " << y << " " << z;
+        std::cout << "\n" << x << " " << y << " " << z << "\n";
+    }
+    double GetVectorLength()
+    {
+        double len = sqrt(std::pow(x, 2) + std::pow(y, 2) + std::pow(z, 2));
+        return len;
     }
 private:
     double x = 0;
@@ -25,7 +30,9 @@ private:
 int main()
 {
     Vector vec1(3,7,2);
+    double length = vec1.GetVectorLength();
     vec1.PrintVector();
+    std::cout << length;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
